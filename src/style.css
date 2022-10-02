@@ -6,7 +6,6 @@
     border: 1px solid #D3D3D3;
     border-radius: 10px;
     max-width: 400px;
-    max-height: 900px;
     margin: 0 auto;
     margin-top: 50px;
     padding: 15px;
@@ -28,3 +27,16 @@ h2{
     list-style-type: none;
 }
 
+.search-btn{
+    background-color: #add8e6;
+}
+
+.forecast{
+    margin:10px;
+    padding-top: 10px;
+}
+
+.icon{
+    font-size: 20px;
+    text-align:center;
+}
