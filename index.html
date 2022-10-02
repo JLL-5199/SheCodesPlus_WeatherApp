@@ -11,6 +11,7 @@
 <body>
     <div class="containter">
         <div class="weather-app">
+            <button class="btn btn-light current-location">Current Location</button>
             <div class="row">
                 <div class="col-6">
                     <h2><i class="fa-solid fa-cloud cloud"></i>10</h2> <h2>°C | °F</h2>
@@ -23,7 +24,14 @@
                     </ul>
                 </div>
             </div>
+            <div class="row">
+                <form id="search-form">
+                    <input type="text" class="form-control" id="search-city" placeholder="Search City">
+                    <button type="submit" class="btn btn-light">Search</button>
+                </form>
+            </div>
         </div>
+        
     </div>
 <script src="src/app.js"></script>    
 </body>
