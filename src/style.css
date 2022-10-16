@@ -51,10 +51,15 @@ h3{
 }
 
 .find{
+    padding-top: 10px;
     text-align: center;
 }
 
 input{
-    width: 100%;
     text-align: center;
+    width: 100%;
+}
+
+h5{
+    font-size: 15px;
 }
