@@ -15,7 +15,6 @@ function showDate(timestamp) {
 }
 
 function showTemperature(response) {
-    console.log(response.data);
     let displayDate = document.querySelector("#today");
     let displayDescription = document.querySelector("#weather-description");
     let displayHumidity=document.querySelector("#humidity")
