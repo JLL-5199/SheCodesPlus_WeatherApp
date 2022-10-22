@@ -21,6 +21,7 @@
 
 .deg-sky-today{
     list-style-type: none;
+    text-transform: capitalize;
 }
 
 .degree-unit{
