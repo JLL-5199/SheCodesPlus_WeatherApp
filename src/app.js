@@ -15,12 +15,14 @@ function showDate(timestamp) {
 }
 
 function showTemperature(response) {
+    let displayCity = document.querySelector("h1");
     let displayDate = document.querySelector("#today");
     let displayDescription = document.querySelector("#weather-description");
     let displayHumidity=document.querySelector("#humidity")
     let displayTemperature = document.querySelector("#degrees");
     let displayWind = document.querySelector("#wind");
 
+    displayCity.innerHTML = response.data.name;
     displayDate.innerHTML = showDate(response.data.dt * 1000);
     displayDescription.innerHTML = response.data.weather[0].description;
     displayHumidity.innerHTML = Math.round(response.data.main.humidity);
