@@ -1,3 +1,5 @@
+// Showing current weather statistics
+
 function showDate(timestamp) {
     let date = new Date(timestamp);
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -33,7 +35,21 @@ function showTemperature(response) {
     displayWind.innerHTML = Math.round(response.data.wind.speed);
 }
 
-let apiKey = "7a45btfdd9a2a5b0bb56a376f3of7ede";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Lisbon&key=${apiKey}`;
+// Search Engine functionality
+function search(city) {
+    let apiKey = "7a45btfdd9a2a5b0bb56a376f3of7ede";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
-axios.get(apiUrl).then(showTemperature);
+    axios.get(apiUrl).then(showTemperature);
+}
+
+function searchEngine(event) {
+    event.preventDefault();
+    let inputCity = document.querySelector("#search-city");
+
+    search(inputCity.value);
+    
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", searchEngine);
