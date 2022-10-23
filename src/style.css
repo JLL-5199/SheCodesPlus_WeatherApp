@@ -24,8 +24,10 @@
     text-transform: capitalize;
 }
 
-.degree-unit{
-    font-size: 15px;
+.current-temperature .active{
+    color: #000000;
+    cursor:default;
+    text-decoration: none;
 }
 
 .today-stats{
