@@ -66,6 +66,7 @@ fahrenheitLink.addEventListener("click", showFahrenheitData);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusData);
 
+
 // Search Engine functionality
 function search(city) {
     let apiKey = "7a45btfdd9a2a5b0bb56a376f3of7ede";

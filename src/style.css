@@ -63,6 +63,9 @@ input{
     width: 100%;
 }
 
-h5{
+h4{
+    display: block;
     font-size: 15px;
+    margin: 0 auto;
+    text-align: center;
 }
