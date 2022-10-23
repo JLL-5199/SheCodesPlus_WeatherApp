@@ -22,15 +22,15 @@ function showTemperature(response) {
     let displayTemperature = document.querySelector("#degrees");
     let displayWind = document.querySelector("#wind");
 
-    displayCity.innerHTML = response.data.name;
-    displayDate.innerHTML = showDate(response.data.dt * 1000);
-    displayDescription.innerHTML = response.data.weather[0].description;
-    displayHumidity.innerHTML = Math.round(response.data.main.humidity);
-    displayTemperature.innerHTML = Math.round(response.data.main.temp);
+    displayCity.innerHTML = response.data.city;
+    displayDate.innerHTML = showDate(response.data.time * 1000);
+    displayDescription.innerHTML = response.data.condition.description;
+    displayHumidity.innerHTML = Math.round(response.data.temperature.humidity);
+    displayTemperature.innerHTML = Math.round(response.data.temperature.current);
     displayWind.innerHTML = Math.round(response.data.wind.speed);
 }
 
-let apiKey = "0f509ad15c6d67d8d05c0fcc1b2ebde2";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=${apiKey}&units=metric`;
+let apiKey = "7a45btfdd9a2a5b0bb56a376f3of7ede";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Lisbon&key=${apiKey}`;
 
 axios.get(apiUrl).then(showTemperature);
