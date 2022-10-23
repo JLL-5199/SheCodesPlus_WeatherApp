@@ -18,7 +18,8 @@ function showTemperature(response) {
     let displayCity = document.querySelector("h1");
     let displayDate = document.querySelector("#today");
     let displayDescription = document.querySelector("#weather-description");
-    let displayHumidity=document.querySelector("#humidity")
+    let displayHumidity = document.querySelector("#humidity");
+    let displayIcon = document.querySelector("#current-icon");
     let displayTemperature = document.querySelector("#degrees");
     let displayWind = document.querySelector("#wind");
 
@@ -26,6 +27,8 @@ function showTemperature(response) {
     displayDate.innerHTML = showDate(response.data.time * 1000);
     displayDescription.innerHTML = response.data.condition.description;
     displayHumidity.innerHTML = Math.round(response.data.temperature.humidity);
+    displayIcon.setAttribute("src", `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`);
+    displayIcon.setAttribute("alt", response.data.condition.description);
     displayTemperature.innerHTML = Math.round(response.data.temperature.current);
     displayWind.innerHTML = Math.round(response.data.wind.speed);
 }
